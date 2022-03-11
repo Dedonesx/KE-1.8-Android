@@ -368,7 +368,7 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				antialiasing = false;
-          case 'tankman':
+                         case 'tankman':
 				// DAD ANIMATION LOADING CODE
 				tex = Paths.getSparrowAtlas('TankmanCaptain', 'shared', true);
 				frames = tex;
