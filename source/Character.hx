@@ -368,6 +368,20 @@ class Character extends FlxSprite
 				playAnim('idle');
 
 				antialiasing = false;
+          case 'tankman':
+				// DAD ANIMATION LOADING CODE
+				tex = Paths.getSparrowAtlas('TankmanCaptain', 'shared', true);
+				frames = tex;
+				animation.addByPrefix('idle', 'Tankman Idle Dance instance 1', 24, false);
+				animation.addByPrefix('singUP', 'Tankman UP note instance 1', 24, false);
+				animation.addByPrefix('singRIGHT', 'Tankman Note Left instance 1', 24, false);
+				animation.addByPrefix('singDOWN', 'Tankman DOWN note instance 1', 24, false);
+				animation.addByPrefix('singLEFT', 'Tankman Right Note instance 1', 24, false);
+				animation.addByIndices('singUP-alt', 'TANKMAN UGH instance 1', 24, false);
+				animation.addByIndices('singDOWN-alt', 'PRETTY GOOD tankman instance 1', 24, false);
+
+				loadOffsetFile(curCharacter);
+				barColor = 0xFFaf66ce;
 
 			case 'parents-christmas':
 				frames = Paths.getSparrowAtlas('mom_dad_christmas_assets', 'shared', true);
